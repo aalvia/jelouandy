@@ -60,10 +60,24 @@ const deletePost = async (req, res) => {
         return res.status(500).json({ message: 'Internal server error' });
     }
 };
+const getPost = async (req, res) => {
+    try {
+        // Busca todos los posts y los ordena por fecha de creación (más reciente primero)
+        const posts = await Post.find()  // Popula el campo 'author' con la información del usuario
+            .sort({ createdAt: -1 });  // Ordena los resultados por fecha de creación
+
+        // Envía los posts como respuesta
+        return res.status(200).json(posts);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ message: 'Internal server error' });
+    }
+};
 
 module.exports = {
     createPost,
     getPosts,
     updatePost,
     deletePost,
+    getPost
 };
