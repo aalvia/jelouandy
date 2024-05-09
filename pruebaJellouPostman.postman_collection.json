@@ -315,6 +315,46 @@
 				"description": "obtener todos los post"
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/posts/663d39d40242591211965d02",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjNkNDc2N2YzMzg1M2RlZGRkZjNkYWIiLCJpYXQiOjE3MTUyOTIwMzAsImV4cCI6MTcxNTI5NTYzMH0.9qyj5sk5CFBAOPqnhkUeRKafpqMd4c3eoXUizVF_IcA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Mi post actualizado\",\r\n    \"body\": \"Este es el contenido actualizado de mi post\",\r\n    \"tags\": [\"actualizado\"],\r\n    \"categories\": [\"tutorial\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/posts/663d39d40242591211965d02",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"posts",
+						"663d39d40242591211965d02"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

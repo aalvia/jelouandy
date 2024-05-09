@@ -14,9 +14,5 @@ const connectDB = async () => {
         process.exit(1);
     }
 };
-module.exports = {
-    db: 'your-mongodb-connection-string',
-    JWT_SECRET: 'your-secret-key',
-    
-};
+
 module.exports = connectDB;
