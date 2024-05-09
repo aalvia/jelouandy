@@ -16,7 +16,7 @@ const connectDB = async () => {
 };
 module.exports = {
     db: 'your-mongodb-connection-string',
-    JWT_SECRET: 'your-secret-key', // Reemplaza 'your-secret-key' por una clave secreta
-    // Agrega otras configuraciones según tus necesidades
+    JWT_SECRET: 'your-secret-key',
+    
 };
 module.exports = connectDB;
